@@ -13,7 +13,7 @@ class DatabaseService {
 
   Future updateUserData(
     double amount,
-    List products,
+    var products,
   ) async {
     return await cartCollection.document(uid).setData({
       'id': DateTime.now().toString(),
@@ -21,5 +21,37 @@ class DatabaseService {
       'products': products,
       'dateTime': DateTime.now(),
     });
+  }
+
+  Future updateUserCart(
+    String id,
+    String title,
+    double total,
+    int quantity,
+  ) async {
+    // DocumentReference docRef = cartCollection.document(uid);
+    // DocumentSnapshot docSnap = await docRef.get();
+    // Map<String, dynamic> docData = docSnap.data;
+    // List<Map<String, dynamic>> products = (docData['products'] as List<dynamic>)
+    //     .map((products) => Map<String, dynamic>.from(products))
+    //     .toList();
+    List<Map<String, dynamic>> products = [
+      {
+        'id': 1,
+        'title': title,
+        'total': total,
+        'quantity': quantity,
+      },
+      {
+        'id': 2,
+        'title': title,
+        'total': total,
+        'quantity': quantity,
+      },
+    ];
+
+    return await cartCollection
+        .document(uid)
+        .updateData({'products': products.toList()});
   }
 }

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '/providers/cart.dart';
+import '/Services/database.dart';
+import '/Model/user.dart';
 
 class CartItem extends StatelessWidget {
   final String productId;
@@ -13,10 +15,15 @@ class CartItem extends StatelessWidget {
   const CartItem(
       {Key key, this.productId, this.id, this.price, this.quantity, this.title})
       : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    final user = Provider.of<User>(context);
+    DatabaseService(uid: user.uid)
+        .updateUserCart(id, title, price * quantity, quantity);
     return Card(
       key: ValueKey(id),
+
       // background: Container(
       //   color: Theme.of(context).errorColor,
       //   child: const Icon(

@@ -27,7 +27,7 @@ class AuthService {
       FirebaseUser user = result.user;
       // List<String> name = email.split('@');
       // String name2 = name[0].trim();
-      await DatabaseService(uid: user.uid).updateUserData(0, null);
+      await DatabaseService(uid: user.uid).updateUserData(0, 'Empty Order');
       return _userFromFirebaseUser(user);
     } catch (e) {
       print(e.toString());
