@@ -1,0 +1,93 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter pub get
+
+## exception
+
+FileSystemException: FileSystemException: Creation failed, path = 'C:\Users\Dell\OneDrive - Bina Nusantara University\Documents\GitHub\firebase-test-butler\merge-test - firebase\android\app\src\main\java\io\flutter\plugins' (OS Error: The tag present in the reparse point buffer is invalid.
+, errno = 4393)
+
+```
+#0      _Directory.createSync (dart:io/directory_impl.dart:133:7)
+#1      _File.createSync (dart:io/file_impl.dart:270:14)
+#2      ForwardingFile.createSync (package:file/src/forwarding/forwarding_file.dart:23:16)
+#3      ErrorHandlingFile.createSync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:286:22)
+#4      _runSync (package:flutter_tools/src/base/error_handling_io.dart:597:14)
+#5      ErrorHandlingFile.createSync (package:flutter_tools/src/base/error_handling_io.dart:285:5)
+#6      _renderTemplateToFile (package:flutter_tools/src/flutter_plugins.dart:31:8)
+#7      _writeAndroidPluginRegistrant (package:flutter_tools/src/flutter_plugins.dart:439:3)
+#8      injectPlugins (package:flutter_tools/src/flutter_plugins.dart:1065:11)
+<asynchronous suspension>
+#9      FlutterProject.ensureReadyForPlatformSpecificTooling (package:flutter_tools/src/project.dart:338:5)
+<asynchronous suspension>
+#10     PackagesGetCommand.runCommand (package:flutter_tools/src/commands/packages.dart:173:5)
+<asynchronous suspension>
+#11     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1125:27)
+<asynchronous suspension>
+#12     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#13     CommandRunner.runCommand (package:args/command_runner.dart:209:13)
+<asynchronous suspension>
+#14     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:288:9)
+<asynchronous suspension>
+#15     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#16     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:236:5)
+<asynchronous suspension>
+#17     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+<asynchronous suspension>
+#18     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#19     main (package:flutter_tools/executable.dart:92:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 2.5.3, on Microsoft Windows [Version 10.0.19042.1165], locale en-ID)
+    • Flutter version 2.5.3 at C:\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 18116933e7 (2 weeks ago), 2021-10-15 10:46:35 -0700
+    • Engine revision d3ea636dc5
+    • Dart version 2.14.4
+
+[!] Android toolchain - develop for Android devices (Android SDK version 30.0.3)
+    • Android SDK at C:\Users\Dell\AppData\Local\Android\sdk
+    ✗ cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+    ✗ Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/windows#android-setup for more details.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop for Windows (Visual Studio Community 2019 16.10.4)
+    • Visual Studio at C:\Program Files (x86)\Microsoft Visual Studio\2019\Community
+    • Visual Studio Community 2019 version 16.10.31515.178
+    • Windows 10 SDK version 10.0.19041.0
+
+[✓] Android Studio (version 4.1)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b01)
+
+[✓] VS Code (version 1.61.2)
+    • VS Code at C:\Users\Dell\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.27.0
+
+[✓] Connected device (3 available)
+    • Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.19042.1165]
+    • Chrome (web)      • chrome  • web-javascript • Google Chrome 95.0.4638.54
+    • Edge (web)        • edge    • web-javascript • Microsoft Edge 95.0.1020.40
+
+! Doctor found issues in 1 category.
+```
