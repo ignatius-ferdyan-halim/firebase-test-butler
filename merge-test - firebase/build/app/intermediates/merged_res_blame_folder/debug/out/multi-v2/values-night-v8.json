@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\College\\Flutter\\merge-test - firebase\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "D:\\Github\\firebase-test-butler\\merge-test - firebase\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
                 {
-                    "source": "D:\\College\\Flutter\\merge-test - firebase\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "D:\\Github\\firebase-test-butler\\merge-test - firebase\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
